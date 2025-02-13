@@ -1,0 +1,20 @@
+.container {
+    margin: 0;
+}
+.header {
+    background-color: pink;
+    display: flex;
+}
+.productBlok {
+    background-color: orange;
+}
+.cartBlock {
+    background-color: yellow;
+    width: 400px;
+    position: fixed;
+    top: 0px;
+    right:70px;
+    height: 1000px;
+    padding: 20px;
+    transition: 2s;
+}
