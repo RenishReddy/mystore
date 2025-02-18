@@ -21,7 +21,6 @@ const products = [
 const cart = {};
 let users = [];
 let user = {};
-document.write("<div id=root></div>");
 const addToCart = (id) => {
   if (!cart[id]) cart[id] = 1;
   showCart();
@@ -44,6 +43,30 @@ const showTotal = () => {
   divTotal.innerHTML = `Order Value: $${total}`;
 };
 
+const showMain = () => {
+  let str = `
+  <div class="container">
+      <div class="header">
+        <h1>My Store</h1>
+        <h4 onclick="displayCart()">Cart:<span id="items"></span></h4>
+      </div>
+      <div class="productBlock">
+        <div id="divProducts"></div>
+      </div>
+      <div id="divCartBlock" class="cartBlock">
+        <h3>My Cart</h3>
+        <div id="divCart"></div>
+        <div id="divTotal"></div>
+        <button onclick="hideCart()">Close</button>
+      </div>
+        <hr>
+    <h4>@Copyright 2025. All rights reserved.</h4>
+    </div>
+  `;
+  root.innerHTML = str;
+  showProducts();
+};
+
 const showCart = () => {
   let str = "";
   products.map((value) => {
@@ -63,7 +86,7 @@ const showCart = () => {
   showTotal();
 };
 const displayCart = () => {
-  divCartBlock.style.left = "80%"
+  divCartBlock.style.left = "80%";
 };
 const hideCart = () => {
   divCartBlock.style.left = "100%";
@@ -105,7 +128,7 @@ function chkUser() {
       // username = users[i].name;
       // currBalance = users[i].balance;
       user = users[i];
-      showProducts();
+      showMain();
       break;
     } else {
       msg.innerHTML = "Access Denied";
@@ -128,7 +151,6 @@ function addUser() {
   users.push(user);
   showLogin();
 }
-
 
 const showProducts = () => {
   let str = "<div class='row'>";
