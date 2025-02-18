@@ -32,6 +32,7 @@ const showMain = () => {
       <div class="header">
         <h1>My Store</h1>
         <div style='display:flex'>
+        <div>Orders</div>
           <div onclick="displayCart()">Cart:<span id="items"></span></div>
           <div><button onclick='showLogin()'>Logout</button></div>
         </div>
@@ -56,7 +57,8 @@ const showMain = () => {
 const placeOrder = () =>{
   const obj = {
     customer:user.email,
-    orderValue: 100,
+    items: cart
+    orderValue: total,
     status: "pending"
   };
   orders.push(obj)
