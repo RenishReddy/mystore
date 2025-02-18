@@ -1,4 +1,6 @@
 let products = [];
+let orders = [];
+let order = [];
 const cart = {};
 let users = [];
 let user = {};
@@ -51,6 +53,16 @@ const showMain = () => {
   showProducts();
 };
 
+const placeOrder = () =>{
+  const obj = {
+    customer:user.email,
+    orderValue: 100,
+    status: "pending"
+  };
+  orders.push(obj)
+  console.log(orders)
+};
+
 const showCart = () => {
   let str = "";
   products.map((value) => {
@@ -61,6 +73,7 @@ const showCart = () => {
       })'>-</button>${cart[value.id]}<button onclick='increment(${
         value.id
       })'>+</button>-$${value.price * cart[value.id]}</li>
+      <button onclick='placeOrder()'>Plcae Order</button>
         `;
     }
   });
