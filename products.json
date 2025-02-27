@@ -5,41 +5,41 @@
       "name": "Spy x family",
       "image": "images/aanya.jpg",
       "desc": " Arigatou gozaimasu. ",
-      "price": 25
+      "price": 250
     },
     {
       "id": 2,
       "name": "Solo levelling",
       "image": "images/jinoo.jpg",
       "desc": "I am the E-level rank.The weakest human in the world. ",
-      "price": 45
+      "price": 300
     },
     {
       "id": 3,
       "name": "Bleach",
       "image": "images/ichigo.jpg",
       "desc": "Bankai! Zangetsu. ",
-      "price": 30
+      "price": 350
     },
     {
         "id": 4,
         "name": "One piece",
         "image": "images/luffy.jpg",
         "desc": "Lets find the final piece("Laugh Tale"). ",
-        "price": 60
+        "price": 600
       },
       {
         "id": 5,
         "name": "Demon slayer",
         "image": "images/tanjiro.jpg",
         "desc": "My sister is my love Nezuko. ",
-        "price": 30
+        "price": 490
       },
       {
         "id": 6,
         "name": "Dragon ball z",
         "image": "images/gohan.jpg",
         "desc": "Lets fight till one die. ",
-        "price": 45
+        "price": 900
       }
   ]
